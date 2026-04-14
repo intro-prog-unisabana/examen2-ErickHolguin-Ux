@@ -25,8 +25,7 @@ def add_lap(timer, time):
     if len(timer["times"]) < timer["max"]:
         timer["times"].append(time)
         timer["total"] += time
-    else:
-        print("No se pueden agregar más vueltas: límite alcanzado.")
+
     return timer
 
 
