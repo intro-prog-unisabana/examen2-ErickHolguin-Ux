@@ -12,9 +12,12 @@ def main():
     f = open(filename)
     n = int(f.readline())
     # TODO: Crear el cronometro usando lap_timer.init(n)
-    
+    timer = lap_timer.init(n)
     # TODO: Leer los n tiempos de vuelta y agregarlos con lap_timer.add_lap()
-    
+    for i in range(n):
+        tiempo = float(f.readline())
+        lap_timer.add_lap(timer, tiempo)
+    f.close()
     # TODO: Imprimir la racha decreciente mas larga
     #       usando lap_timer.longest_decreasing_streak()
     
