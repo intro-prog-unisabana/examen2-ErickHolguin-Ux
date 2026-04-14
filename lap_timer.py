@@ -43,7 +43,7 @@ def cumulative_time(timer):
     Retorna el tiempo acumulado de todas las vueltas.
     """
     # TODO: Implementar
-    return timer["total"]
+    return round(timer["total"],2)
 
 
 def format_laps(timer):
@@ -68,14 +68,17 @@ def fastest_multi_lap(timer, k):
     Retorna el tiempo acumulado mas rapido de cualquier k vueltas consecutivas.
     """
     # TODO: Implementar
-    min_suma = float("inf")
-    for i in range(len(timer["times"])-k+1):
-        current_sum = sum(timer["times"][i:i+k])
-        if current_sum < min_sum:
-            min_sum = current_sum
-    return min_sum
+    min_sum = 0
+    for j in range(k):
+        min_sum += timer["times"][j]   
+    for i in range(1, len(timer["times"]) - k + 1):
+        s = 0
+        for j in range(k):
+            s += timer["times"][i+j]
+        if s < min_sum:
+            min_sum = s
 
-    return 
+    return min_sum
 
 
 def longest_decreasing_streak(timer):
