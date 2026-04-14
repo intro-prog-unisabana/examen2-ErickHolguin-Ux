@@ -7,7 +7,7 @@ import lap_timer
 
 def main():
     # TODO: Pedir el nombre del archivo al usuario usando input()
-     filename = input("Ingrese el nombre del archivo con los tiempos de vuelta: ")
+    filename = input("Ingrese el nombre del archivo con los tiempos de vuelta: ")
     # TODO: Abrir el archivo y leer el numero de vueltas n
     
     # TODO: Crear el cronometro usando lap_timer.init(n)
