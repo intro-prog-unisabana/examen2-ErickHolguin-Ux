@@ -20,6 +20,7 @@ def main():
     f.close()
     # TODO: Imprimir la racha decreciente mas larga
     #       usando lap_timer.longest_decreasing_streak()
+    print(lap_timer.longest_decreasing_streak(timer))
     
     
 
